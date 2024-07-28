@@ -4,17 +4,6 @@ import wave
 import os
 from datetime import datetime
 
-# ffmpeg와 ffprobe 경로 설정
-os.environ['FFMPEG_PATH'] = 'C:\\Program Files\\ffmpeg-7.0.1-essentials_build\\bin'
-AudioSegment.ffmpeg = os.path.join(os.environ['FFMPEG_PATH'], 'ffmpeg.exe')
-AudioSegment.ffprobe = os.path.join(os.environ['FFMPEG_PATH'], 'ffprobe.exe')
-
-# 환경 변수 설정
-os.environ['FFMPEG_PATH'] = 'C:/Program Files/ffmpeg-7.0.1-essentials_build/bin'
-
-AudioSegment.ffmpeg = os.environ['FFMPEG_PATH'] + '/ffmpeg.exe'
-AudioSegment.ffprobe = os.environ['FFMPEG_PATH'] + '/ffprobe.exe'
-
 app = FastAPI()
 
 # 파일을 저장할 디렉토리 설정
